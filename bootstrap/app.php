@@ -21,6 +21,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+
+# use facade, eloquent
+
 $app->withFacades();
 
 $app->withEloquent();
@@ -62,9 +65,10 @@ $app->singleton(
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+# for authorization
+$app->routeMiddleware([
+    'auth' => App\Http\Middleware\Authenticate::class,
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -77,13 +81,13 @@ $app->singleton(
 |
 */
 
-$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
-$app->register(Aws\Laravel\AwsServiceProvider::class);
-
 $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);   # for authrization
 // $app->register(App\Providers\EventServiceProvider::class);
 
+# aws, generator, helpers composer added
+$app->register(Aws\Laravel\AwsServiceProvider::class);
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
@@ -96,7 +100,7 @@ $app->register(App\Providers\AppServiceProvider::class);
 */
 
 $app->router->group([
-    'namespace' => 'App\Http\Controllers',
+    'namespace' => 'App\Http\Conlltrollers',
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
 });
