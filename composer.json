@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": "^7.2",
-
         "aws/aws-sdk-php-laravel": "^3.4",
         "ramsey/uuid": "^3.8",
         "flipbox/lumen-generator": "^6.0",
