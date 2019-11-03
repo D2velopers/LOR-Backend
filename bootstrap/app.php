@@ -21,7 +21,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+
 # use facade, eloquent
+
 $app->withFacades();
 
 $app->withEloquent();
@@ -46,6 +48,7 @@ $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
+
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +81,7 @@ $app->routeMiddleware([
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);   # for authrization
 // $app->register(App\Providers\EventServiceProvider::class);
 
