@@ -23,5 +23,4 @@ $router->group(['prefix' => 'user', 'middleware'=>'auth.jwt'], function () use (
     $router->get('/{uuid?}', 'UserController@info');                # 유저정보
     $router->put('/{uuid?}', 'UserController@update');              # 유저정보 수정
     $router->delete('/signout', 'UserController@signout');          # 회원 탈퇴
-
 });
