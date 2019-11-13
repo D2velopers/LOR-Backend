@@ -83,6 +83,7 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MikeReinders\\RuneTerraPHP\\' => 26,
         ),
         'L' => 
         array (
@@ -149,6 +150,10 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
             'Cron\\' => 5,
             'ClassPreloader\\' => 15,
             'Carbon\\' => 7,
+        ),
+        'B' => 
+        array (
+            'Base32\\' => 7,
         ),
         'A' => 
         array (
@@ -284,6 +289,10 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'MikeReinders\\RuneTerraPHP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mike-reinders/runeterra-php/src',
         ),
         'Laravel\\Lumen\\' => 
         array (
@@ -453,6 +462,10 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Base32\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/christian-riesen/base32/src',
+        ),
         'Aws\\Laravel\\' => 
         array (
             0 => __DIR__ . '/..' . '/aws/aws-sdk-php-laravel/src',
@@ -485,25 +498,24 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
     );
 
     public static $classMap = array (
+        'App\\Card\\KrMeta' => __DIR__ . '/../..' . '/app/Card/KrMeta.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Events\\ExampleEvent' => __DIR__ . '/../..' . '/app/Events/ExampleEvent.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DeckController' => __DIR__ . '/../..' . '/app/Http/Controllers/DeckController.php',
         'App\\Http\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExampleController.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
+        'App\\Http\\Middleware\\CorsMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/CorsMiddleware.php',
         'App\\Http\\Middleware\\ExampleMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/ExampleMiddleware.php',
         'App\\Jobs\\ExampleJob' => __DIR__ . '/../..' . '/app/Jobs/ExampleJob.php',
         'App\\Jobs\\Job' => __DIR__ . '/../..' . '/app/Jobs/Job.php',
         'App\\Listeners\\ExampleListener' => __DIR__ . '/../..' . '/app/Listeners/ExampleListener.php',
         'App\\Models\\Card\\Card' => __DIR__ . '/../..' . '/app/Models/Card/Card.php',
         'App\\Models\\Card\\CardEvalution' => __DIR__ . '/../..' . '/app/Models/Card/CardEvalution.php',
-        'App\\Models\\Card\\CardKeyword' => __DIR__ . '/../..' . '/app/Models/Card/CardKeyword.php',
         'App\\Models\\Card\\EnPath' => __DIR__ . '/../..' . '/app/Models/Card/EnPath.php',
-        'App\\Models\\Card\\Keyword' => __DIR__ . '/../..' . '/app/Models/Card/Keyword.php',
-        'App\\Models\\Card\\KrDescription' => __DIR__ . '/../..' . '/app/Models/Card/KrDescription.php',
-        'App\\Models\\Card\\KrPath' => __DIR__ . '/../..' . '/app/Models/Card/KrPath.php',
-        'App\\Models\\Card\\KrType' => __DIR__ . '/../..' . '/app/Models/Card/KrType.php',
+        'App\\Models\\Card\\KrCardMeta' => __DIR__ . '/../..' . '/app/Models/Card/KrCardMeta.php',
         'App\\Models\\User\\Deck' => __DIR__ . '/../..' . '/app/Models/User/Deck.php',
         'App\\Models\\User\\Profile' => __DIR__ . '/../..' . '/app/Models/User/Profile.php',
         'App\\Models\\User\\Role' => __DIR__ . '/../..' . '/app/Models/User/Role.php',
@@ -1092,6 +1104,7 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         'Aws\\XRay\\XRayClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/XRay/XRayClient.php',
         'Aws\\signer\\Exception\\signerException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/signer/Exception/signerException.php',
         'Aws\\signer\\signerClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/signer/signerClient.php',
+        'Base32\\Base32' => __DIR__ . '/..' . '/christian-riesen/base32/src/Base32.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
         'Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
@@ -2518,6 +2531,7 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         'JmesPath\\Utils' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/Utils.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'KeywordsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/Cards/KeywordsTableSeeder.php',
+        'KrMetaTableSeeder' => __DIR__ . '/../..' . '/database/seeds/Cards/KrMetaTableSeeder.php',
         'Laravel\\Lumen\\Application' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Application.php',
         'Laravel\\Lumen\\Auth\\Authorizable' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Auth/Authorizable.php',
         'Laravel\\Lumen\\Bootstrap\\LoadEnvironmentVariables' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Bootstrap/LoadEnvironmentVariables.php',
@@ -2543,6 +2557,8 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         'Laravel\\Lumen\\Testing\\TestCase' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Testing/TestCase.php',
         'Laravel\\Lumen\\Testing\\WithoutEvents' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Testing/WithoutEvents.php',
         'Laravel\\Lumen\\Testing\\WithoutMiddleware' => __DIR__ . '/..' . '/laravel/lumen-framework/src/Testing/WithoutMiddleware.php',
+        'MikeReinders\\RuneTerraPHP\\DeckEncoding' => __DIR__ . '/..' . '/mike-reinders/runeterra-php/src/DeckEncoding.php',
+        'MikeReinders\\RuneTerraPHP\\VarInt' => __DIR__ . '/..' . '/mike-reinders/runeterra-php/src/VarInt.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV5.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV6' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV6.php',
@@ -4187,59 +4203,6 @@ class ComposerStaticIniteb2b39d5b5bb05aaf6ea80063eae7505
         'Symfony\\Component\\HttpKernel\\RebootableInterface' => __DIR__ . '/..' . '/symfony/http-kernel/RebootableInterface.php',
         'Symfony\\Component\\HttpKernel\\TerminableInterface' => __DIR__ . '/..' . '/symfony/http-kernel/TerminableInterface.php',
         'Symfony\\Component\\HttpKernel\\UriSigner' => __DIR__ . '/..' . '/symfony/http-kernel/UriSigner.php',
-        'Symfony\\Component\\Mime\\Address' => __DIR__ . '/..' . '/symfony/mime/Address.php',
-        'Symfony\\Component\\Mime\\BodyRendererInterface' => __DIR__ . '/..' . '/symfony/mime/BodyRendererInterface.php',
-        'Symfony\\Component\\Mime\\CharacterStream' => __DIR__ . '/..' . '/symfony/mime/CharacterStream.php',
-        'Symfony\\Component\\Mime\\DependencyInjection\\AddMimeTypeGuesserPass' => __DIR__ . '/..' . '/symfony/mime/DependencyInjection/AddMimeTypeGuesserPass.php',
-        'Symfony\\Component\\Mime\\Email' => __DIR__ . '/..' . '/symfony/mime/Email.php',
-        'Symfony\\Component\\Mime\\Encoder\\AddressEncoderInterface' => __DIR__ . '/..' . '/symfony/mime/Encoder/AddressEncoderInterface.php',
-        'Symfony\\Component\\Mime\\Encoder\\Base64ContentEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/Base64ContentEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\Base64Encoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/Base64Encoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\Base64MimeHeaderEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/Base64MimeHeaderEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\ContentEncoderInterface' => __DIR__ . '/..' . '/symfony/mime/Encoder/ContentEncoderInterface.php',
-        'Symfony\\Component\\Mime\\Encoder\\EightBitContentEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/EightBitContentEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\EncoderInterface' => __DIR__ . '/..' . '/symfony/mime/Encoder/EncoderInterface.php',
-        'Symfony\\Component\\Mime\\Encoder\\IdnAddressEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/IdnAddressEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\MimeHeaderEncoderInterface' => __DIR__ . '/..' . '/symfony/mime/Encoder/MimeHeaderEncoderInterface.php',
-        'Symfony\\Component\\Mime\\Encoder\\QpContentEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/QpContentEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\QpEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/QpEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\QpMimeHeaderEncoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/QpMimeHeaderEncoder.php',
-        'Symfony\\Component\\Mime\\Encoder\\Rfc2231Encoder' => __DIR__ . '/..' . '/symfony/mime/Encoder/Rfc2231Encoder.php',
-        'Symfony\\Component\\Mime\\Exception\\AddressEncoderException' => __DIR__ . '/..' . '/symfony/mime/Exception/AddressEncoderException.php',
-        'Symfony\\Component\\Mime\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/mime/Exception/ExceptionInterface.php',
-        'Symfony\\Component\\Mime\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/mime/Exception/InvalidArgumentException.php',
-        'Symfony\\Component\\Mime\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/mime/Exception/LogicException.php',
-        'Symfony\\Component\\Mime\\Exception\\RfcComplianceException' => __DIR__ . '/..' . '/symfony/mime/Exception/RfcComplianceException.php',
-        'Symfony\\Component\\Mime\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/mime/Exception/RuntimeException.php',
-        'Symfony\\Component\\Mime\\FileBinaryMimeTypeGuesser' => __DIR__ . '/..' . '/symfony/mime/FileBinaryMimeTypeGuesser.php',
-        'Symfony\\Component\\Mime\\FileinfoMimeTypeGuesser' => __DIR__ . '/..' . '/symfony/mime/FileinfoMimeTypeGuesser.php',
-        'Symfony\\Component\\Mime\\Header\\AbstractHeader' => __DIR__ . '/..' . '/symfony/mime/Header/AbstractHeader.php',
-        'Symfony\\Component\\Mime\\Header\\DateHeader' => __DIR__ . '/..' . '/symfony/mime/Header/DateHeader.php',
-        'Symfony\\Component\\Mime\\Header\\HeaderInterface' => __DIR__ . '/..' . '/symfony/mime/Header/HeaderInterface.php',
-        'Symfony\\Component\\Mime\\Header\\Headers' => __DIR__ . '/..' . '/symfony/mime/Header/Headers.php',
-        'Symfony\\Component\\Mime\\Header\\IdentificationHeader' => __DIR__ . '/..' . '/symfony/mime/Header/IdentificationHeader.php',
-        'Symfony\\Component\\Mime\\Header\\MailboxHeader' => __DIR__ . '/..' . '/symfony/mime/Header/MailboxHeader.php',
-        'Symfony\\Component\\Mime\\Header\\MailboxListHeader' => __DIR__ . '/..' . '/symfony/mime/Header/MailboxListHeader.php',
-        'Symfony\\Component\\Mime\\Header\\ParameterizedHeader' => __DIR__ . '/..' . '/symfony/mime/Header/ParameterizedHeader.php',
-        'Symfony\\Component\\Mime\\Header\\PathHeader' => __DIR__ . '/..' . '/symfony/mime/Header/PathHeader.php',
-        'Symfony\\Component\\Mime\\Header\\UnstructuredHeader' => __DIR__ . '/..' . '/symfony/mime/Header/UnstructuredHeader.php',
-        'Symfony\\Component\\Mime\\Message' => __DIR__ . '/..' . '/symfony/mime/Message.php',
-        'Symfony\\Component\\Mime\\MessageConverter' => __DIR__ . '/..' . '/symfony/mime/MessageConverter.php',
-        'Symfony\\Component\\Mime\\MimeTypeGuesserInterface' => __DIR__ . '/..' . '/symfony/mime/MimeTypeGuesserInterface.php',
-        'Symfony\\Component\\Mime\\MimeTypes' => __DIR__ . '/..' . '/symfony/mime/MimeTypes.php',
-        'Symfony\\Component\\Mime\\MimeTypesInterface' => __DIR__ . '/..' . '/symfony/mime/MimeTypesInterface.php',
-        'Symfony\\Component\\Mime\\NamedAddress' => __DIR__ . '/..' . '/symfony/mime/NamedAddress.php',
-        'Symfony\\Component\\Mime\\Part\\AbstractMultipartPart' => __DIR__ . '/..' . '/symfony/mime/Part/AbstractMultipartPart.php',
-        'Symfony\\Component\\Mime\\Part\\AbstractPart' => __DIR__ . '/..' . '/symfony/mime/Part/AbstractPart.php',
-        'Symfony\\Component\\Mime\\Part\\DataPart' => __DIR__ . '/..' . '/symfony/mime/Part/DataPart.php',
-        'Symfony\\Component\\Mime\\Part\\MessagePart' => __DIR__ . '/..' . '/symfony/mime/Part/MessagePart.php',
-        'Symfony\\Component\\Mime\\Part\\Multipart\\AlternativePart' => __DIR__ . '/..' . '/symfony/mime/Part/Multipart/AlternativePart.php',
-        'Symfony\\Component\\Mime\\Part\\Multipart\\DigestPart' => __DIR__ . '/..' . '/symfony/mime/Part/Multipart/DigestPart.php',
-        'Symfony\\Component\\Mime\\Part\\Multipart\\FormDataPart' => __DIR__ . '/..' . '/symfony/mime/Part/Multipart/FormDataPart.php',
-        'Symfony\\Component\\Mime\\Part\\Multipart\\MixedPart' => __DIR__ . '/..' . '/symfony/mime/Part/Multipart/MixedPart.php',
-        'Symfony\\Component\\Mime\\Part\\Multipart\\RelatedPart' => __DIR__ . '/..' . '/symfony/mime/Part/Multipart/RelatedPart.php',
-        'Symfony\\Component\\Mime\\Part\\TextPart' => __DIR__ . '/..' . '/symfony/mime/Part/TextPart.php',
-        'Symfony\\Component\\Mime\\RawMessage' => __DIR__ . '/..' . '/symfony/mime/RawMessage.php',
         'Symfony\\Component\\Process\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/process/Exception/ExceptionInterface.php',
         'Symfony\\Component\\Process\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/process/Exception/InvalidArgumentException.php',
         'Symfony\\Component\\Process\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/process/Exception/LogicException.php',

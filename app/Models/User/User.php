@@ -21,7 +21,7 @@ class User extends Model
     ];
     
     protected $hidden = [
-        'user_id', 'roll_id', 'password',
+        'user_id', 'role_id', 'password',
     ];
 
     protected static function boot()

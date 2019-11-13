@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99505dc64048b9a41afa7974d30a5c6b",
+    "content-hash": "52660847256ed76f12001391cf3b5852",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -155,6 +155,61 @@
                 "sdk"
             ],
             "time": "2019-09-09T21:00:25+00:00"
+        },
+        {
+            "name": "christian-riesen/base32",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ChristianRiesen/base32.git",
+                "reference": "80ff0e3b2124e61b4b39e2535709452f70bff367"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ChristianRiesen/base32/zipball/80ff0e3b2124e61b4b39e2535709452f70bff367",
+                "reference": "80ff0e3b2124e61b4b39e2535709452f70bff367",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "php": ">=5.6",
+                "phpunit/phpunit": "^5.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Base32\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Riesen",
+                    "email": "chris.riesen@gmail.com",
+                    "homepage": "http://christianriesen.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Base32 encoder/decoder according to RFC 4648",
+            "homepage": "https://github.com/ChristianRiesen/base32",
+            "keywords": [
+                "base32",
+                "decode",
+                "encode",
+                "rfc4648"
+            ],
+            "time": "2018-11-02T09:03:50+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -2068,6 +2123,57 @@
                 "lumen"
             ],
             "time": "2019-10-15T18:30:14+00:00"
+        },
+        {
+            "name": "mike-reinders/runeterra-php",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mike-reinders/runeterra-php.git",
+                "reference": "e9d5e7967d712f8739bfcf395d63101e88dc654f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mike-reinders/runeterra-php/zipball/e9d5e7967d712f8739bfcf395d63101e88dc654f",
+                "reference": "e9d5e7967d712f8739bfcf395d63101e88dc654f",
+                "shasum": ""
+            },
+            "require": {
+                "christian-riesen/base32": "^1.3",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MikeReinders\\RuneTerraPHP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Reinders",
+                    "email": "mike.reinders.gg@gmail.com",
+                    "homepage": "https://github.com/mike-reinders",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Legends of Runeterra DeckCode Encoder/Decoder for PHP",
+            "homepage": "https://github.com/mike-reinders/runeterra-php",
+            "keywords": [
+                "deckcode",
+                "decoder",
+                "encoder",
+                "legends",
+                "php",
+                "runeterra"
+            ],
+            "time": "2019-10-24T10:13:10+00:00"
         },
         {
             "name": "monolog/monolog",
