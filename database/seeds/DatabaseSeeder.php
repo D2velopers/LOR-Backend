@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             KeywordsTableSeeder::class,
             CardsTableSeeder::class,
+            KrMetaTableSeeder::class,
         ]);
     }
 }

@@ -4,13 +4,13 @@ namespace App\Models\Card;
 
 use Illuminate\Database\Eloquent\Model;
 
-class KrType extends Model
+class KrCardMeta extends Model
 {
     public $incremeting = false;
 
     public $timestamps = false;
 
-    protected $table = 'kr_type';
+    protected $table = 'kr_cardmeta';
 
     protected $primaryKey = 'card';
 
