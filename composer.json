@@ -12,6 +12,7 @@
         "illuminate/mail": "^6.5",
         "laravel/helpers": "^1.1",
         "laravel/lumen-framework": "^6.0",
+        "mike-reinders/runeterra-php": "^0.0.2",
         "ramsey/uuid": "^3.8"
     },
     "require-dev": {
