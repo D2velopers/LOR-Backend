@@ -28,6 +28,11 @@ $app->withFacades();
 
 $app->withEloquent();
 
+# Facades
+$app->withFacades(true,[
+    'Illuminate\Support\Facades\Mail' => 'Mail'
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -69,6 +74,10 @@ $app->singleton(
 $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
 ]);
+# jwt middleware
+$app->routeMiddleware([
+    'jwt.auth' => App\Http\Middleware\JwtMiddleware::class,
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -82,12 +91,23 @@ $app->routeMiddleware([
 */
 
 $app->register(App\Providers\AppServiceProvider::class);
-$app->register(App\Providers\AuthServiceProvider::class);   # for authrization
+// $app->register(App\Providers\AuthServiceProvider::class);   # for authrization
 // $app->register(App\Providers\EventServiceProvider::class);
 
 # aws, generator, helpers composer added
 $app->register(Aws\Laravel\AwsServiceProvider::class);
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
+# mail service added
+$app->register(Illuminate\Mail\MailServiceProvider::class);
+
+# for mail service
+$app->configure('services');
+$app->configure('mail');
+// $app->alias('mailer', Illuminate\Mail\Mailer::class);
+// $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
+// $app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
@@ -100,7 +120,7 @@ $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 */
 
 $app->router->group([
-    'namespace' => 'App\Http\Conlltrollers',
+    'namespace' => 'App\Http\Controllers',
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
 });

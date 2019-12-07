@@ -15,13 +15,16 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'user', 'middleware'=>'auth.jwt'], function () use ($router){    
+$router->group(['prefix' => 'user'], function () use ($router){    
+$router->post('/signin', 'Auth\UserController@authenticate');  # 로그인
+$router->post('/signup', 'Auth\UserController@signup');        # 회원가입
+$router->get('/verification', 'Auth\UserController@emailverification'); # 메일인증
+});
 
-    $router->post('/signup/{provider?}', 'UserController@signup');  # 회원가입
-    $router->post('/signin/{provider?}', 'UserController@signin');  # 로그인
-    $router->get('/logout', 'UserController@logout');               # 로그아웃
-    $router->get('/{uuid?}', 'UserController@info');                # 유저정보
-    $router->put('/{uuid?}', 'UserController@update');              # 유저정보 수정
-    $router->delete('/signout', 'UserController@signout');          # 회원 탈퇴
 
+$router->group(['prefix' => 'user', 'middleware'=>'jwt.auth'], function () use ($router){    
+    $router->post('/logout', 'Auth\UserController@logout');               # 로그아웃
+    $router->get('/{uuid?}', 'Auth\UserController@info');                # 유저정보
+    $router->put('/{uuid?}', 'Auth\UserController@update');              # 유저정보 수정
+    $router->delete('/signout', 'Auth\UserController@signout');          # 회원 탈퇴
 });
