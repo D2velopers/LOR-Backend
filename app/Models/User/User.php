@@ -17,11 +17,11 @@ class User extends Model
     protected $primaryKey = 'user_id';
 
     protected $fillable = [
-        'email', 'name', 'password',
+        'email', 'name', 'password', 'verification_code', 'activated',
     ];
     
     protected $hidden = [
-        'user_id', 'role_id', 'password',
+        'user_id', 'roll_id', 'password', 
     ];
 
     protected static function boot()
